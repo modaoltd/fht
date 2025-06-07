@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FHT Token - Power to the People</title>
+  <title>FHT Token - Where Meme Coins Meet Siberian Madness</title>
   <link rel="icon" href="logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   <style>
@@ -12,7 +12,6 @@
       --blue: #1976d2;
       --white: #ffffff;
       --dark: #0a0a0a;
-      --accent: #f5f5f5;
     }
     * {
       margin: 0;
@@ -21,10 +20,11 @@
     }
     body {
       font-family: 'Roboto', sans-serif;
-      color: var(--white);
       background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(10,10,10,0.95)), url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
       background-size: cover;
+      color: var(--white);
     }
+
     nav {
       background: var(--dark);
       padding: 1rem 2rem;
@@ -32,25 +32,56 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 4px solid var(--red);
+      position: relative;
     }
-    nav h1 {
+    .nav-brand {
       font-size: 1.8rem;
       color: var(--red);
     }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
+    .nav-toggle {
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: var(--white);
+      display: none;
+      cursor: pointer;
     }
-    nav ul li a {
+    .nav-menu {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-menu a {
       text-decoration: none;
       color: var(--white);
       font-weight: bold;
       transition: color 0.3s ease;
     }
-    nav ul li a:hover {
+    .nav-menu a:hover {
       color: var(--red);
     }
+
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
+      .nav-menu {
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        display: none;
+        padding: 1rem;
+        border-left: 2px solid var(--red);
+        border-bottom: 2px solid var(--red);
+        z-index: 999;
+      }
+      .nav-menu.show {
+        display: flex;
+      }
+    }
+
     header {
       text-align: center;
       padding: 4rem 1rem;
@@ -60,16 +91,17 @@
       background-size: 100px;
     }
     header h2 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-top: 2rem;
       color: var(--blue);
       text-shadow: 2px 2px var(--dark);
     }
     header p {
       font-size: 1.2rem;
-      max-width: 700px;
+      max-width: 800px;
       margin: 1rem auto;
       color: #ddd;
+      line-height: 1.6;
     }
     .btn {
       background: var(--red);
@@ -86,6 +118,7 @@
     .btn:hover {
       background: #b71c1c;
     }
+
     .contract {
       text-align: center;
       margin-top: 3rem;
@@ -102,6 +135,7 @@
       border-radius: 5px;
       margin-top: 0.5rem;
     }
+
     footer {
       background: #000;
       color: #999;
@@ -109,34 +143,53 @@
       padding: 2rem 1rem;
       font-size: 0.9rem;
     }
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: flex-end;
-      }
-      header h2 {
-        font-size: 2rem;
-      }
+    footer a {
+      color: #888;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    footer a:hover {
+      color: var(--red);
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <h1>FHT</h1>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#buy">Buy FHT</a></li>
-      <li><a href="#tokenomics">Tokenomics</a></li>
-      <li><a href="https://t.me/yourtelegram" target="_blank">Community</a></li>
-    </ul>
+    <div class="nav-brand">FHT</div>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    <div class="nav-menu" id="navMenu">
+      <a href="#">Home</a>
+      <a href="#buy">Buy FHT</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="https://t.me/pebriscom" target="_blank">Telegram</a>
+      <a href="https://x.com/Pebris_com" target="_blank">Twitter</a>
+    </div>
   </nav>
 
   <header>
     <img src="logo.png" alt="FHT Logo" width="120" style="border-radius: 50%;" />
-    <h2>FHT Token - Power to the People</h2>
-    <p>The meme token revolution is here. FHT empowers the community with freedom, bold vision, and a sense of humor only matched by presidents. On BSC.</p>
+    <h2>Furry Hysteria Token (FHT) – Where Meme Coins Meet Siberian Madness!</h2>
+    <p>
+      🐺 FHT is crypto’s first "Siberian Chaos Cult" token, embodying the legendary HUSKY TRIO:
+      <br/><br/>
+      - Unhinged Price Swings (More erratic than a Husky mid-destruction)<br/>
+      - "Awooo" Governance (Meme votes & chaos logic)<br/>
+      - 24/7 Hyperactivity (Husky on espresso energy)
+      <br/><br/>
+      💥 <strong>Core Features</strong>:<br/>
+      1️⃣ <strong>Chaos Pool</strong> – 5% chance per swap to trigger "Husky Rampage"<br/>
+      2️⃣ <strong>"Awooo" Governance</strong> – Meme-based proposals<br/>
+      3️⃣ <strong>Bipolar Burn</strong> – Price-based burns/airdrops
+      <br/><br/>
+      🐕 <strong>Community Vibe</strong>:<br/>
+      - Twitter: Daily Husky destruction clips + charts<br/>
+      - Motto: "Lost funds? Just blame the Husky."
+      <br/><br/>
+      ⚠️ Warning: “FHT’s volatility is unhinged – but honestly, so are Huskies.”
+      <br/><br/>
+      🌐 Join FHT: From "Human Leads Dog" to "Dog Leads Portfolio" in 3...2...1... 🐾💥
+    </p>
     <a href="https://four.meme/token/0x8fcff5738bc9871f04936bc423d81a1a3ff14444" target="_blank" class="btn">Buy on FOUR.MEME</a>
   </header>
 
@@ -146,10 +199,18 @@
   </section>
 
   <footer>
-    &copy; 2025 FHT Token. Not financial advice. Just memes and freedom.
-    <br/>
-    <a href="https://bscscan.com/token/0x8fcff5738bc9871f04936bc423d81a1a3ff14444" target="_blank" style="color:#888;">View on BscScan</a>
+    &copy; 2025 FHT Token. Not financial advice. Just memes and freedom.<br/>
+    <a href="https://bscscan.com/token/0x8fcff5738bc9871f04936bc423d81a1a3ff14444" target="_blank">View on BscScan</a> |
+    <a href="https://t.me/pebriscom" target="_blank">Telegram</a> |
+    <a href="https://x.com/Pebris_com" target="_blank">Twitter</a>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
 
 </body>
 </html>
